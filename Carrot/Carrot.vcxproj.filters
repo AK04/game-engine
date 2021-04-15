@@ -30,9 +30,15 @@
     <ClInclude Include="src\Carrot\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Carrot\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

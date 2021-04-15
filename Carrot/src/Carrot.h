@@ -2,7 +2,7 @@
 
 #include "Carrot\Application.h"
 
-#include <stdio.h>
+#include "Carrot\Log.h"
 
 
 // Entry point

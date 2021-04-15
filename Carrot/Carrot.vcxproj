@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Carrot\Log.h" />
     <ClInclude Include="src\Carrot.h" />
     <ClInclude Include="src\Carrot\Application.h" />
     <ClInclude Include="src\Carrot\Carrot.h" />
@@ -18,6 +19,7 @@
     <ClInclude Include="src\Carrot\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Carrot\Log.cpp" />
     <ClCompile Include="src\Carrot\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -69,6 +71,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CT_PLATFORM_WINDOWS;CT_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Carrot\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -83,6 +86,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CT_PLATFORM_WINDOWS;CT_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Carrot\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

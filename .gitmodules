@@ -1,0 +1,3 @@
+[submodule "Carrot/vendor/spdlog"]
+	path = Carrot/vendor/spdlog
+	url = https://github.com/gabime/spdlog
