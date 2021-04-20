@@ -1,45 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Carrot">
+      <UniqueIdentifier>{B06644AB-9C08-6F81-85C3-82D57104F6D1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Carrot\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Carrot.h" />
     <ClInclude Include="src\Carrot\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Carrot</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\Carrot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Carrot\Core.h">
+      <Filter>Carrot</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>Carrot</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Log.h">
-      <Filter>Header Files</Filter>
+      <Filter>Carrot</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Carrot</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\Log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Carrot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
