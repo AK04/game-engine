@@ -34,6 +34,7 @@
     <ClInclude Include="src\Carrot\Log.h">
       <Filter>Carrot</Filter>
     </ClInclude>
+    <ClInclude Include="src\ctpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Application.cpp">
@@ -42,8 +43,6 @@
     <ClCompile Include="src\Carrot\Log.cpp">
       <Filter>Carrot</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
+    <ClCompile Include="src\ctpch.cpp" />
   </ItemGroup>
 </Project>

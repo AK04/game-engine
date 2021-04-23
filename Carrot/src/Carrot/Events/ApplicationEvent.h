@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Carrot {
 
 	class CARROT_API WindowResizeEvent : public Event

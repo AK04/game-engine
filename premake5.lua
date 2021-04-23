@@ -17,11 +17,13 @@ project "Carrot"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "ctpch.h"
+    pchsource "Carrot/src/ctpch.cpp"
+
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp"
     }
-
 
     includedirs {
         "%{prj.name}/src",

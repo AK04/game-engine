@@ -1,3 +1,4 @@
+#include "ctpch.h"
 #include "Log.h"
 
 namespace Carrot {
