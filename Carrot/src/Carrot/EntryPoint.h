@@ -7,9 +7,9 @@ extern Carrot::Application* Carrot::CreateApplication();
 int main(int argc, char** argv) {
 
 	Carrot::Log::Init();
-	CT_INFO("Heres some info");
-	int a = 20;
-	CT_WARN("warning = {0}", a);
+	CT_CORE_INFO("Heres some info");
+	int a = 5000;
+	CT_CRITICAL("warning = {0}", a);
 
 	auto app = Carrot::CreateApplication();
 	app->Run();

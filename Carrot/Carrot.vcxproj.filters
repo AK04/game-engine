@@ -4,6 +4,9 @@
     <Filter Include="Carrot">
       <UniqueIdentifier>{B06644AB-9C08-6F81-85C3-82D57104F6D1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Carrot\Events">
+      <UniqueIdentifier>{94AC4D4A-006D-C980-C9A7-12FE35270E5D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Carrot.h" />
@@ -16,6 +19,18 @@
     <ClInclude Include="src\Carrot\EntryPoint.h">
       <Filter>Carrot</Filter>
     </ClInclude>
+    <ClInclude Include="src\Carrot\Events\ApplicationEvent.h">
+      <Filter>Carrot\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Events\Event.h">
+      <Filter>Carrot\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Events\KeyEvent.h">
+      <Filter>Carrot\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Events\MouseEvent.h">
+      <Filter>Carrot\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Carrot\Log.h">
       <Filter>Carrot</Filter>
     </ClInclude>
@@ -27,5 +42,8 @@
     <ClCompile Include="src\Carrot\Log.cpp">
       <Filter>Carrot</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
