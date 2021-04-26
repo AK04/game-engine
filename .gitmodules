@@ -1,3 +1,6 @@
 [submodule "Carrot/vendor/spdlog"]
 	path = Carrot/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Carrot/vendor/GLFW"]
+	path = Carrot/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
