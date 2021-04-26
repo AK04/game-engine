@@ -41,20 +41,20 @@ namespace Carrot {
 
 	};
 
-	class KeyTypedEvent : public KeyEvent {
-
+	class KeyReleasedEvent : public KeyEvent
+	{
 	public:
-		KeyTypedEvent(const KeyCode keycode)
+		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "KeyTypedEvent: " << m_KeyCode;
+			ss << "KeyReleasedEvent: " << m_KeyCode;
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(KeyTyped)
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
 }

@@ -28,7 +28,7 @@ namespace Carrot {
 
 	};
 
-	class CARROT_API MouseScrollEvent : public Event {
+	class CARROT_API MouseScrolledEvent : public Event {
 
 	public:
 		MouseScrolledEvent(const float xOffset, const float yOffset)
