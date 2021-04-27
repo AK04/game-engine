@@ -5,6 +5,8 @@
 #include "Carrot/Events/KeyEvent.h"
 #include "Carrot/Events/MouseEvent.h"
 
+#include "glad/glad.h"
+
 namespace Carrot {
 
 	static bool s_GLFWInitialized = false;
@@ -45,6 +47,8 @@ namespace Carrot {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		CT_CORE_ASSERT(status, "Glad is not working :(");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

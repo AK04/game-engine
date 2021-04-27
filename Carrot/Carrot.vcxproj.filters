@@ -37,6 +37,12 @@
     <ClInclude Include="src\Carrot\Events\MouseEvent.h">
       <Filter>Carrot\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Carrot\Layer.h">
+      <Filter>Carrot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\LayerStack.h">
+      <Filter>Carrot</Filter>
+    </ClInclude>
     <ClInclude Include="src\Carrot\Log.h">
       <Filter>Carrot</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Application.cpp">
+      <Filter>Carrot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Layer.cpp">
+      <Filter>Carrot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\LayerStack.cpp">
       <Filter>Carrot</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\Log.cpp">

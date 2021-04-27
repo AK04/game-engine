@@ -11,14 +11,16 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Carrot/vendor/GLFW/include"
+IncludeDir["Glad"] = "Carrot/vendor/Glad/include"
 
 include "Carrot/vendor/GLFW"
+include "Carrot/vendor/Glad"
 
 project "Carrot"
     location "Carrot"
     kind "SharedLib"
+    staticruntime "off"
     language "C++"
-    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -34,23 +36,25 @@ project "Carrot"
     includedirs {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines 
         {
             "CT_PLATFORM_WINDOWS",
-            "CT_BUILD_DLL"
+            "CT_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands 
@@ -60,14 +64,17 @@ project "Carrot"
 
     filter "configurations:Debug"
         defines "CT_DEBUG"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "CT_RELEASE"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "CT_DIST"
+        runtime "Release"
         optimize "On"
 
     
@@ -75,7 +82,7 @@ project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
-    staticruntime "on"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -97,7 +104,6 @@ project "Sandbox"
     
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines 
@@ -107,12 +113,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "CT_DEBUG"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "CT_RELEASE"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "CT_DIST"
+        runtime "Release"
         optimize "On"
