@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "Carrot\vendor\GLFW\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Glad", "Carrot\vendor\Glad\Glad.vcxproj", "{BDD6857C-A90D-870D-52FA-6C103E10030F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "Carrot\vendor\imgui\ImGui.vcxproj", "{C0FF640D-2C14-8DBE-F595-301E616989EF}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}"
 EndProject
 Global
@@ -34,6 +36,12 @@ Global
 		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Dist|x64.Build.0 = Dist|x64
 		{BDD6857C-A90D-870D-52FA-6C103E10030F}.release|x64.ActiveCfg = release|x64
 		{BDD6857C-A90D-870D-52FA-6C103E10030F}.release|x64.Build.0 = release|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.debug|x64.ActiveCfg = debug|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.debug|x64.Build.0 = debug|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Dist|x64.ActiveCfg = Dist|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Dist|x64.Build.0 = Dist|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.release|x64.ActiveCfg = release|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.release|x64.Build.0 = release|x64
 		{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}.debug|x64.ActiveCfg = debug|x64
 		{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}.debug|x64.Build.0 = debug|x64
 		{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}.Dist|x64.ActiveCfg = Dist|x64
