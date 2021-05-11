@@ -158,11 +158,13 @@
     <ClInclude Include="src\Carrot\Events\KeyEvent.h" />
     <ClInclude Include="src\Carrot\Events\MouseEvent.h" />
     <ClInclude Include="src\Carrot\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Carrot\Input.h" />
     <ClInclude Include="src\Carrot\Layer.h" />
     <ClInclude Include="src\Carrot\LayerStack.h" />
     <ClInclude Include="src\Carrot\Log.h" />
     <ClInclude Include="src\Carrot\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\ctpch.h" />
   </ItemGroup>
@@ -173,6 +175,7 @@
     <ClCompile Include="src\Carrot\LayerStack.cpp" />
     <ClCompile Include="src\Carrot\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ctpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

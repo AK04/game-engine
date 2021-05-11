@@ -1,4 +1,5 @@
 workspace "Carrot"
+    startproject "Carrot"
     architecture "x64"
 
     configurations {

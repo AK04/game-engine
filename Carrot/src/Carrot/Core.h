@@ -10,6 +10,10 @@
 	#error Carrot only supports Windows!
 #endif
 
+#ifdef CT_DEBUG
+	#define HZ_ENABLE_ASSERTS
+#endif
+
 #ifdef CT_ENABLE_ASSERTS
 	#define CT_ASSERT(x, ...) { if(!(x) { CT_ERROR("Assertion failed {0} ", __VA_ARGS__); __debugbreak(); } }
 	#define CT_CORE_ASSERT(x, ...) { if(!(x) { CT__CORE_ERROR("Assertion failed {0} ", __VA_ARGS__); __debugbreak(); } }

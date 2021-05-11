@@ -2,6 +2,7 @@
 #include "Application.h"
 
 #include "Carrot/Log.h"
+#include "Input.h"
 
 
 namespace Carrot {
@@ -52,6 +53,9 @@ namespace Carrot {
 
 			for (Layer* layer : m_LayerStack) 
 				layer->OnUpdate();
+
+			auto [x, y] = Input::GetMousePosition();
+			CT_CORE_ASSERT("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
