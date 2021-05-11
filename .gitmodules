@@ -7,3 +7,6 @@
 [submodule "Carrot/vendor/imgui"]
 	path = Carrot/vendor/imgui
 	url = https://github.com/TheCherno/imgui.git
+[submodule "Carrot/vendor/glm"]
+	path = Carrot/vendor/glm
+	url = https://github.com/g-truc/glm.git

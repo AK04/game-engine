@@ -8,11 +8,15 @@ public:
 	}
 
 	void OnUpdate() override {
-		CT_INFO("Example Layer: Update");
+		//CT_INFO("Example Layer: Update");
+
+		if (Carrot::Input::IsKeyPressed(CT_KEY_TAB))
+			CT_TRACE("Tab is pressed!");
+
 	}
 
 	void OnEvent(Carrot::Event& event) override {
-		CT_TRACE("{0}", event);
+		//CT_TRACE("{0}", event);
 	}
 
 };
