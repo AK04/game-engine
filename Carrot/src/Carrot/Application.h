@@ -7,6 +7,8 @@
 #include "Carrot/Events/Event.h"
 #include "Carrot/Events/ApplicationEvent.h"
 
+#include "Carrot/ImGui/ImGuiLayer.h"
+
 namespace Carrot {
 
 	class CARROT_API Application
@@ -28,6 +30,7 @@ namespace Carrot {
 
 	private:
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
