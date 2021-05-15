@@ -22,9 +22,10 @@ include "Carrot/vendor/imgui"
 
 project "Carrot"
     location "Carrot"
-    kind "SharedLib"
-    staticruntime "off"
+    kind "StaticLib"
     language "C++"
+    cppdialect "C++17"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -37,6 +38,10 @@ project "Carrot"
         "%{prj.name}/src/**.cpp",
         "%{prj.name}/vendor/glm/glm/**.hpp",
         "%{prj.name}/vendor/glm/glm/**.inl"
+    }
+
+    defines {
+        "_CRT_SECURE_NO_WARNINGS"
     }
 
     includedirs {
@@ -56,7 +61,6 @@ project "Carrot"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
 
         defines 
@@ -66,32 +70,28 @@ project "Carrot"
             "GLFW_INCLUDE_NONE"
         }
 
-        postbuildcommands 
-        {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
-        }
-
     filter "configurations:Debug"
         defines "CT_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "CT_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "CT_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
-    staticruntime "off"
+    cppdialect "C++17"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -105,7 +105,8 @@ project "Sandbox"
     includedirs {
         "Carrot/vendor/spdlog/include;",
         "Carrot/src",
-        "%{IncludeDir.glm}"
+        "%{IncludeDir.glm}",
+        "Carrot/vendor"
     }
 
     links {
@@ -113,7 +114,6 @@ project "Sandbox"
     }
     
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
 
         defines 
@@ -124,14 +124,14 @@ project "Sandbox"
     filter "configurations:Debug"
         defines "CT_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "CT_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "CT_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"

@@ -1,5 +1,7 @@
 #include <Carrot.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Carrot::Layer {
 public:
 	ExampleLayer()
@@ -14,6 +16,14 @@ public:
 			CT_TRACE("Tab is pressed!");
 
 	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
+
 
 	void OnEvent(Carrot::Event& event) override {
 		//CT_TRACE("{0}", event);

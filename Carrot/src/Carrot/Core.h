@@ -1,10 +1,14 @@
 #pragma once
 
 #ifdef CT_PLATFORM_WINDOWS
-	#ifdef CT_BUILD_DLL
-		#define CARROT_API __declspec(dllexport)
-	#else 
-		#define CARROT_API __declspec(dllimport)
+	#if CT_DYNAMIC_LINK
+		#ifdef CT_BUILD_DLL
+			#define CARROT_API __declspec(dllexport)
+		#else 
+			#define CARROT_API __declspec(dllimport)
+		#endif
+	#else
+		#define CARROT_API
 	#endif
 #else
 	#error Carrot only supports Windows!
