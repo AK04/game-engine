@@ -1341,6 +1341,9 @@
     <ClInclude Include="src\Carrot\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Carrot\Renderer\Shader.h" />
+    <ClInclude Include="src\Carrot\Renderer\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Carrot\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Application.cpp">
@@ -1372,5 +1375,8 @@
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Carrot\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Carrot\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Carrot\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>
