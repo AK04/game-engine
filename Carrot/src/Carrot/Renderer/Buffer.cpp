@@ -9,8 +9,8 @@ namespace Carrot{
 	VertexBuffer* VertexBuffer::Create(float* vertices, uint32_t size) {
 
 		switch (Renderer::GetAPI()) {
-			case RendererAPI::None:   CT_CORE_ASSERT(false, "RendererAPI::None is not currently supported!"); return nullptr;
-			case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
+			case RendererAPI::API::None:   CT_CORE_ASSERT(false, "RendererAPI::None is not currently supported!"); return nullptr;
+			case RendererAPI::API::OpenGL: return new OpenGLVertexBuffer(vertices, size);
 		}
 
 		CT_CORE_ASSERT(false, "Unknown Renderer API");
@@ -22,8 +22,8 @@ namespace Carrot{
 	IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t size) {
 
 		switch (Renderer::GetAPI()) {
-			case RendererAPI::None:   CT_CORE_ASSERT(false, "RendererAPI::None is not currently supported!"); return nullptr;
-			case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
+			case RendererAPI::API::None:   CT_CORE_ASSERT(false, "RendererAPI::None is not currently supported!"); return nullptr;
+			case RendererAPI::API::OpenGL: return new OpenGLIndexBuffer(indices, size);
 		}
 
 		CT_CORE_ASSERT(false, "Unknown Renderer API");
