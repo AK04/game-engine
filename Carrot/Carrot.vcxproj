@@ -157,6 +157,7 @@
     <ClInclude Include="src\Carrot\MouseButtonCodes.h" />
     <ClInclude Include="src\Carrot\Renderer\Buffer.h" />
     <ClInclude Include="src\Carrot\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Carrot\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Carrot\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Carrot\Renderer\Renderer.h" />
     <ClInclude Include="src\Carrot\Renderer\RendererAPI.h" />
@@ -592,6 +593,7 @@
     <ClCompile Include="src\Carrot\LayerStack.cpp" />
     <ClCompile Include="src\Carrot\Log.cpp" />
     <ClCompile Include="src\Carrot\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Carrot\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Carrot\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Carrot\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Carrot\Renderer\RendererAPI.cpp" />

@@ -10,8 +10,9 @@
 #include "Carrot/ImGui/ImGuiLayer.h"
 
 #include "Carrot/Renderer/Shader.h"
-#include "Carrot/Renderer/Buffer.h"
 #include "Carrot/Renderer/VertexArray.h"
+
+#include "Carrot/Renderer/OrthographicCamera.h"
 
 namespace Carrot {
 
@@ -44,6 +45,7 @@ namespace Carrot {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
