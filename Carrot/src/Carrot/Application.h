@@ -7,6 +7,8 @@
 #include "Carrot/Events/Event.h"
 #include "Carrot/Events/ApplicationEvent.h"
 
+#include "Carrot/Core/Timestep.h"
+
 #include "Carrot/ImGui/ImGuiLayer.h"
 
 #include "Carrot/Renderer/Shader.h"
@@ -35,11 +37,12 @@ namespace Carrot {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
+		float m_LastFrameTime = 0.0f;
 
 	private:
 		static Application* s_Instance;

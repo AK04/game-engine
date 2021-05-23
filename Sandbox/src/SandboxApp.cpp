@@ -2,6 +2,8 @@
 
 #include "imgui/imgui.h"
 
+#include "Carrot/Core/Timestep.h"
+
 class ExampleLayer : public Carrot::Layer {
 public:
 	ExampleLayer()
@@ -118,22 +120,22 @@ public:
 
 	}
 
-	void OnUpdate() override {
+	void OnUpdate(Carrot::Timestep ts) override {
 
 		if(Carrot::Input::IsKeyPressed(CT_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed;
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 		else if (Carrot::Input::IsKeyPressed(CT_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed;
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
 		
 		if (Carrot::Input::IsKeyPressed(CT_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed;
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
 		else if (Carrot::Input::IsKeyPressed(CT_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed;
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 		
 		if (Carrot::Input::IsKeyPressed(CT_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		else if (Carrot::Input::IsKeyPressed(CT_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 		
 		Carrot::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Carrot::RenderCommand::Clear();
@@ -173,10 +175,10 @@ private:
 	Carrot::OrthographicCamera m_Camera;
 
 	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 0.1f;
+	float m_CameraMoveSpeed = 5.1f;
 	
 	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 2.0f;
+	float m_CameraRotationSpeed = 90.0f;
 	
 };
 

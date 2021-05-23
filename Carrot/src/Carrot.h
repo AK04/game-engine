@@ -4,6 +4,8 @@
 #include "Carrot/Layer.h"
 #include "Carrot/Log.h"
 
+#include "Carrot/Core/Timestep.h"
+
 #include "Carrot/Input.h"
 #include "Carrot/Keycodes.h"
 #include "Carrot/MouseButtonCodes.h"
