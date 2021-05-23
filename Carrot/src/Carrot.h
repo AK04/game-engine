@@ -10,6 +10,14 @@
 
 #include "Carrot/ImGui/ImGuiLayer.h"
 
+#include "Carrot/Renderer/Renderer.h"
+#include "Carrot/Renderer/RenderCommand.h"
+
+#include "Carrot/Renderer/Buffer.h"
+#include "Carrot/Renderer/Shader.h"
+#include "Carrot/Renderer/VertexArray.h"
+
+#include "Carrot/Renderer/OrthographicCamera.h"
 
 // Entry point
 
