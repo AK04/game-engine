@@ -15,6 +15,7 @@ IncludeDir["GLFW"] = "Carrot/vendor/GLFW/include"
 IncludeDir["Glad"] = "Carrot/vendor/Glad/include"
 IncludeDir["ImGui"] = "Carrot/vendor/imgui"
 IncludeDir["glm"] = "Carrot/vendor/glm"
+IncludeDir["stb_image"] = "Carrot/vendor/stb_image"
 
 include "Carrot/vendor/GLFW"
 include "Carrot/vendor/Glad"
@@ -36,6 +37,8 @@ project "Carrot"
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
         "%{prj.name}/vendor/glm/glm/**.hpp",
         "%{prj.name}/vendor/glm/glm/**.inl"
     }
@@ -50,7 +53,9 @@ project "Carrot"
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
-        "%{IncludeDir.glm}"
+        "%{IncludeDir.glm}",
+        "%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
     }
 
     links {

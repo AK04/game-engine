@@ -17,6 +17,7 @@
 
 #include "Carrot/Renderer/Buffer.h"
 #include "Carrot/Renderer/Shader.h"
+#include "Carrot/Renderer/Texture.h"
 #include "Carrot/Renderer/VertexArray.h"
 
 #include "Carrot/Renderer/OrthographicCamera.h"
