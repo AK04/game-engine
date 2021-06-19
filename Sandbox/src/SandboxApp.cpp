@@ -92,7 +92,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(Carrot::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = Carrot::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 		std::string flatColorShaderVertexSrc = R"(
 			#version 330 core
@@ -126,17 +126,16 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(Carrot::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
-
+		m_FlatColorShader = Carrot::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 		
 
-		m_TextureShader.reset(Carrot::Shader::Create("assets/shaders/Texture.glsl"));
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = Carrot::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_ChernoLogoTexture = Carrot::Texture2D::Create("assets/textures/ChernoLogo.png");
 
-		std::dynamic_pointer_cast<Carrot::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<Carrot::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<Carrot::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<Carrot::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Carrot::Timestep ts) override {
@@ -179,10 +178,12 @@ public:
 			}
 		}
 
+		auto textureShader = m_ShaderLibrary.Get("Texture");
+
 		m_Texture->Bind();
-		Carrot::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Carrot::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		m_ChernoLogoTexture->Bind();
-		Carrot::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Carrot::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		
 		// Triangle
 		//Carrot::Renderer::Submit(m_Shader, m_VertexArray);
@@ -212,10 +213,11 @@ public:
 
 
 private:
+	Carrot::ShaderLibrary m_ShaderLibrary;
 	Carrot::Ref<Carrot::Shader> m_Shader;
 	Carrot::Ref<Carrot::VertexArray> m_VertexArray;
 
-	Carrot::Ref<Carrot::Shader> m_FlatColorShader, m_TextureShader;
+	Carrot::Ref<Carrot::Shader> m_FlatColorShader;
 	Carrot::Ref<Carrot::VertexArray> m_SquareVA;
 
 	Carrot::Ref<Carrot::Texture2D> m_Texture, m_ChernoLogoTexture;
