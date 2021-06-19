@@ -9,6 +9,7 @@
 #include "Carrot/Input.h"
 #include "Carrot/Keycodes.h"
 #include "Carrot/MouseButtonCodes.h"
+#include "Carrot/OrthographicCameraController.h"
 
 #include "Carrot/ImGui/ImGuiLayer.h"
 

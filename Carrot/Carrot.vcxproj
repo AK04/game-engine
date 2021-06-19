@@ -156,6 +156,7 @@
     <ClInclude Include="src\Carrot\LayerStack.h" />
     <ClInclude Include="src\Carrot\Log.h" />
     <ClInclude Include="src\Carrot\MouseButtonCodes.h" />
+    <ClInclude Include="src\Carrot\OrthographicCameraController.h" />
     <ClInclude Include="src\Carrot\Renderer\Buffer.h" />
     <ClInclude Include="src\Carrot\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Carrot\Renderer\OrthographicCamera.h" />
@@ -597,6 +598,7 @@
     <ClCompile Include="src\Carrot\Layer.cpp" />
     <ClCompile Include="src\Carrot\LayerStack.cpp" />
     <ClCompile Include="src\Carrot\Log.cpp" />
+    <ClCompile Include="src\Carrot\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Carrot\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Carrot\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Carrot\Renderer\RenderCommand.cpp" />

@@ -12,7 +12,7 @@
 class ExampleLayer : public Carrot::Layer {
 public:
 	ExampleLayer()
-		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f) {
+		: Layer("Example"), m_CameraController(1280.0f / 720.0f) {
 		m_VertexArray.reset(Carrot::VertexArray::Create());
 
 		float vertices[3 * 7] = {
@@ -140,28 +140,12 @@ public:
 
 	void OnUpdate(Carrot::Timestep ts) override {
 
-		if(Carrot::Input::IsKeyPressed(CT_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
-		else if (Carrot::Input::IsKeyPressed(CT_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed * ts;
-		
-		if (Carrot::Input::IsKeyPressed(CT_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed * ts;
-		else if (Carrot::Input::IsKeyPressed(CT_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
-		
-		if (Carrot::Input::IsKeyPressed(CT_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed * ts;
-		else if (Carrot::Input::IsKeyPressed(CT_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed * ts;
+		m_CameraController.OnUpdate(ts);
 		
 		Carrot::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Carrot::RenderCommand::Clear();
 
-		m_Camera.SetPosition(m_CameraPosition);
-		m_Camera.SetRotation(m_CameraRotation);
-
-		Carrot::Renderer::BeginScene(m_Camera);
+		Carrot::Renderer::BeginScene(m_CameraController.GetCamera());
 
 		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
@@ -206,8 +190,8 @@ public:
 
 
 
-	void OnEvent(Carrot::Event& event) override {
-		
+	void OnEvent(Carrot::Event& e) override {
+		m_CameraController.OnEvent(e);
 	}
 
 
@@ -222,14 +206,7 @@ private:
 
 	Carrot::Ref<Carrot::Texture2D> m_Texture, m_ChernoLogoTexture;
 	
-	Carrot::OrthographicCamera m_Camera;
-
-	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 5.1f;
-	
-	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 90.0f;
-
+	Carrot::OrthographicCameraController m_CameraController;
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 	
 };
