@@ -21,5 +21,7 @@ private:
 	Carrot::Ref<Carrot::VertexArray> m_SquareVA;
 	Carrot::Ref<Carrot::Shader> m_FlatColorShader;
 
+	Carrot::Ref<Carrot::Texture2D> m_CheckerboardTexture;
+
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 };
