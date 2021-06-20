@@ -141,32 +141,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Carrot.h" />
-    <ClInclude Include="src\Carrot\Application.h" />
-    <ClInclude Include="src\Carrot\Core.h" />
+    <ClInclude Include="src\Carrot\Core\Application.h" />
+    <ClInclude Include="src\Carrot\Core\Core.h" />
+    <ClInclude Include="src\Carrot\Core\EntryPoint.h" />
+    <ClInclude Include="src\Carrot\Core\Input.h" />
+    <ClInclude Include="src\Carrot\Core\Keycodes.h" />
+    <ClInclude Include="src\Carrot\Core\Layer.h" />
+    <ClInclude Include="src\Carrot\Core\LayerStack.h" />
+    <ClInclude Include="src\Carrot\Core\Log.h" />
+    <ClInclude Include="src\Carrot\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Carrot\Core\Timestep.h" />
-    <ClInclude Include="src\Carrot\EntryPoint.h" />
+    <ClInclude Include="src\Carrot\Core\Window.h" />
     <ClInclude Include="src\Carrot\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Carrot\Events\Event.h" />
     <ClInclude Include="src\Carrot\Events\KeyEvent.h" />
     <ClInclude Include="src\Carrot\Events\MouseEvent.h" />
     <ClInclude Include="src\Carrot\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Carrot\Input.h" />
-    <ClInclude Include="src\Carrot\Keycodes.h" />
-    <ClInclude Include="src\Carrot\Layer.h" />
-    <ClInclude Include="src\Carrot\LayerStack.h" />
-    <ClInclude Include="src\Carrot\Log.h" />
-    <ClInclude Include="src\Carrot\MouseButtonCodes.h" />
-    <ClInclude Include="src\Carrot\OrthographicCameraController.h" />
     <ClInclude Include="src\Carrot\Renderer\Buffer.h" />
     <ClInclude Include="src\Carrot\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Carrot\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Carrot\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Carrot\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Carrot\Renderer\Renderer.h" />
     <ClInclude Include="src\Carrot\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Carrot\Renderer\Shader.h" />
     <ClInclude Include="src\Carrot\Renderer\Texture.h" />
     <ClInclude Include="src\Carrot\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Carrot\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -592,15 +592,15 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Carrot\Application.cpp" />
+    <ClCompile Include="src\Carrot\Core\Application.cpp" />
+    <ClCompile Include="src\Carrot\Core\Layer.cpp" />
+    <ClCompile Include="src\Carrot\Core\LayerStack.cpp" />
+    <ClCompile Include="src\Carrot\Core\Log.cpp" />
     <ClCompile Include="src\Carrot\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Carrot\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Carrot\Layer.cpp" />
-    <ClCompile Include="src\Carrot\LayerStack.cpp" />
-    <ClCompile Include="src\Carrot\Log.cpp" />
-    <ClCompile Include="src\Carrot\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Carrot\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Carrot\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Carrot\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Carrot\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Carrot\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Carrot\Renderer\RendererAPI.cpp" />

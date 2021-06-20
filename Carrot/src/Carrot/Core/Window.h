@@ -2,7 +2,7 @@
 
 #include "ctpch.h"
 
-#include "Carrot/Core.h"
+#include "Carrot/Core/Core.h"
 #include "Carrot/Events/Event.h"
 
 namespace Carrot {

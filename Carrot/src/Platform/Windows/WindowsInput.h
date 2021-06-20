@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Carrot/Input.h"
+#include "Carrot/Core/Input.h"
 
 namespace Carrot {
 

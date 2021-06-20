@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "Carrot/Core.h"
+#include "Carrot/Core/Core.h"
 
 namespace Carrot {
 

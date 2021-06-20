@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Carrot/Window.h"
+#include "Carrot/Core/Window.h"
 #include "Carrot/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

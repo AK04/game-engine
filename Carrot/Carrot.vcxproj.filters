@@ -57,17 +57,38 @@
     <ClInclude Include="src\Carrot.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\Application.h">
-      <Filter>src\Carrot</Filter>
+    <ClInclude Include="src\Carrot\Core\Application.h">
+      <Filter>src\Carrot\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\Core.h">
-      <Filter>src\Carrot</Filter>
+    <ClInclude Include="src\Carrot\Core\Core.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\EntryPoint.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\Input.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\Keycodes.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\Layer.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\LayerStack.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\Log.h">
+      <Filter>src\Carrot\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Core\MouseButtonCodes.h">
+      <Filter>src\Carrot\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Core\Timestep.h">
       <Filter>src\Carrot\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\EntryPoint.h">
-      <Filter>src\Carrot</Filter>
+    <ClInclude Include="src\Carrot\Core\Window.h">
+      <Filter>src\Carrot\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Events\ApplicationEvent.h">
       <Filter>src\Carrot\Events</Filter>
@@ -84,24 +105,6 @@
     <ClInclude Include="src\Carrot\ImGui\ImGuiLayer.h">
       <Filter>src\Carrot\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\Input.h">
-      <Filter>src\Carrot</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot\Keycodes.h">
-      <Filter>src\Carrot</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot\Layer.h">
-      <Filter>src\Carrot</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot\LayerStack.h">
-      <Filter>src\Carrot</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot\Log.h">
-      <Filter>src\Carrot</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot\MouseButtonCodes.h">
-      <Filter>src\Carrot</Filter>
-    </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\Buffer.h">
       <Filter>src\Carrot\Renderer</Filter>
     </ClInclude>
@@ -109,6 +112,9 @@
       <Filter>src\Carrot\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\OrthographicCamera.h">
+      <Filter>src\Carrot\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Renderer\OrthographicCameraController.h">
       <Filter>src\Carrot\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\RenderCommand.h">
@@ -128,9 +134,6 @@
     </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\VertexArray.h">
       <Filter>src\Carrot\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Carrot\Window.h">
-      <Filter>src\Carrot</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
@@ -1401,11 +1404,19 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\OrthographicCameraController.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Carrot\Application.cpp">
-      <Filter>src\Carrot</Filter>
+    <ClCompile Include="src\Carrot\Core\Application.cpp">
+      <Filter>src\Carrot\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Core\Layer.cpp">
+      <Filter>src\Carrot\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Core\LayerStack.cpp">
+      <Filter>src\Carrot\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Core\Log.cpp">
+      <Filter>src\Carrot\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\ImGui\ImGuiBuild.cpp">
       <Filter>src\Carrot\ImGui</Filter>
@@ -1413,19 +1424,13 @@
     <ClCompile Include="src\Carrot\ImGui\ImGuiLayer.cpp">
       <Filter>src\Carrot\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\Carrot\Layer.cpp">
-      <Filter>src\Carrot</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Carrot\LayerStack.cpp">
-      <Filter>src\Carrot</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Carrot\Log.cpp">
-      <Filter>src\Carrot</Filter>
-    </ClCompile>
     <ClCompile Include="src\Carrot\Renderer\Buffer.cpp">
       <Filter>src\Carrot\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\Renderer\OrthographicCamera.cpp">
+      <Filter>src\Carrot\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Renderer\OrthographicCameraController.cpp">
       <Filter>src\Carrot\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\Renderer\RenderCommand.cpp">
@@ -1476,6 +1481,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Carrot\OrthographicCameraController.cpp" />
   </ItemGroup>
 </Project>

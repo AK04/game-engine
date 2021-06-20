@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Carrot/Core.h"
+#include "Carrot/Core/Core.h"
 #include "Carrot/Events/Event.h"
 
 #include "Carrot/Core/Timestep.h"

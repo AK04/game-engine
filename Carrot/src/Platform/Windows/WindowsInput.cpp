@@ -1,7 +1,7 @@
 #include "ctpch.h"
 #include "WindowsInput.h"
 
-#include "Carrot/Application.h"
+#include "Carrot/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Carrot {

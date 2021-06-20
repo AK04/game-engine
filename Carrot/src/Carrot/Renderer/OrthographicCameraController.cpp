@@ -1,8 +1,8 @@
 #include "ctpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Carrot/Input.h"
-#include "Carrot/KeyCodes.h"
+#include "Carrot/Core/Input.h"
+#include "Carrot/Core/KeyCodes.h"
 
 namespace Carrot {
 
