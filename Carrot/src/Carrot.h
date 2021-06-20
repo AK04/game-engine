@@ -14,6 +14,7 @@
 #include "Carrot/ImGui/ImGuiLayer.h"
 
 #include "Carrot/Renderer/Renderer.h"
+#include "Carrot/Renderer/Renderer2D.h"
 #include "Carrot/Renderer/RenderCommand.h"
 
 #include "Carrot/Renderer/Buffer.h"
@@ -23,8 +24,3 @@
 
 #include "Carrot/Renderer/OrthographicCamera.h"
 
-// Entry point
-
-#include "Carrot/Core/EntryPoint.h"
-
-// -----------
