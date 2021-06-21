@@ -10,6 +10,9 @@
     <Filter Include="src\Carrot\Core">
       <UniqueIdentifier>{9F6CD3F9-0BF8-40BE-1409-C4B280139DBE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Carrot\Debug">
+      <UniqueIdentifier>{9D5B4D34-8954-6C86-B286-510B9EDE4B92}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Carrot\Events">
       <UniqueIdentifier>{EB2183C1-5738-8157-A0AF-0C790C0552DF}</UniqueIdentifier>
     </Filter>
@@ -90,6 +93,9 @@
     <ClInclude Include="src\Carrot\Core\Window.h">
       <Filter>src\Carrot\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Carrot\Debug\Instrumentor.h">
+      <Filter>src\Carrot\Debug</Filter>
+    </ClInclude>
     <ClInclude Include="src\Carrot\Events\ApplicationEvent.h">
       <Filter>src\Carrot\Events</Filter>
     </ClInclude>
@@ -121,6 +127,9 @@
       <Filter>src\Carrot\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\Renderer.h">
+      <Filter>src\Carrot\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Carrot\Renderer\Renderer2D.h">
       <Filter>src\Carrot\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\RendererAPI.h">
@@ -1404,8 +1413,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Carrot\Renderer\Renderer2D.h" />
-    <ClInclude Include="src\Carrot\Debug\Instrumentor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Core\Application.cpp">
@@ -1439,6 +1446,9 @@
       <Filter>src\Carrot\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\Renderer\Renderer.cpp">
+      <Filter>src\Carrot\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Carrot\Renderer\Renderer2D.cpp">
       <Filter>src\Carrot\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Carrot\Renderer\RendererAPI.cpp">
@@ -1483,6 +1493,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Carrot\Renderer\Renderer2D.cpp" />
   </ItemGroup>
 </Project>
