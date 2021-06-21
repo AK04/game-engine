@@ -15,6 +15,8 @@
 
 #include "Carrot/Core/Log.h"
 
+#include "Carrot/Debug/Instrumentor.h"
+
 #ifdef CT_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif

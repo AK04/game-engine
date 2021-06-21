@@ -152,6 +152,7 @@
     <ClInclude Include="src\Carrot\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Carrot\Core\Timestep.h" />
     <ClInclude Include="src\Carrot\Core\Window.h" />
+    <ClInclude Include="src\Carrot\Debug\Instrumentor.h" />
     <ClInclude Include="src\Carrot\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Carrot\Events\Event.h" />
     <ClInclude Include="src\Carrot\Events\KeyEvent.h" />

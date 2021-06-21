@@ -1405,6 +1405,7 @@
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
     <ClInclude Include="src\Carrot\Renderer\Renderer2D.h" />
+    <ClInclude Include="src\Carrot\Debug\Instrumentor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Carrot\Core\Application.cpp">
